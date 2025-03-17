@@ -1,6 +1,6 @@
 let amigos = [];
 
-//Funcion para agragar amigo
+//Función para agregar amigo
 function agregarAmigo() {
     let nombre = document.getElementById ("amigo").value;
      if (nombre === "") {
@@ -12,13 +12,13 @@ function agregarAmigo() {
     }
 }
 
-//funcion actualizar la lista de  amigos
+//Función para mostrar la lista de  amigos
 function mostrarListaAmigos(){
     let listaAmigos = document.querySelector("#listaAmigos");
     listaAmigos.innerHTML = "";
 
-    for(let index = 0; index < amigos.length; index++){
-        const element = amigos[index];
+    for(let i = 0; i < amigos.length; i++){
+        const element = amigos[i];
 
         let listaHTML = document.createElement("li");
         listaHTML.textContent = element;
@@ -26,7 +26,7 @@ function mostrarListaAmigos(){
     }
 }
 
-//funcion para actualizar lista de amigos
+//Función para actualizar la lista de amigos
 function actualizarListaAmigos() {
     let listaHTML = document.querySelector(listaAmigos);
     listaHTML.innerHTML = "";
@@ -37,7 +37,7 @@ function actualizarListaAmigos() {
     });
 }
 
-//funcion para sortear amigos
+//Función para sortear amigos
 function sortearAmigo() {
     let cantidadAmigos = amigos.length;
     if (cantidadAmigos === 0) {
